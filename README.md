@@ -1,4 +1,4 @@
-# Task Tracker - verify push
+# Task Tracker
 
 Links 🔴 Deployed App on Render, and GitHub Repository 🔴
 Render Web Service Host (Render link)
