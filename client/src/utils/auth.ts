@@ -24,8 +24,12 @@ class AuthService {
     return localStorage.getItem('id_token') || '';
   }
 
+  setToken(token: string) {
+    localStorage.setItem('id_token', token);
+  }
+
   login(idToken: string) {
-    localStorage.setItem('id_token', idToken);
+    this.setToken(idToken);
     window.location.assign('/');
   }
 
@@ -36,4 +40,3 @@ class AuthService {
 }
 
 export default new AuthService();
-
