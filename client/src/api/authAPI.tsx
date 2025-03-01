@@ -1,6 +1,6 @@
 import { UserLogin } from "../interfaces/UserLogin";
 
-const API_URL = import.meta.env.VITE_API_URL || "http://localhost:3000"; // fallback on open 
+const API_URL = import.meta.env.VITE_API_URL; 
 
 const login = async (userInfo: UserLogin) => {
   const response = await fetch(`${API_URL}/auth/login`, {
