@@ -1,5 +1,7 @@
 import { UserLogin } from "../interfaces/UserLogin";
 
+
+// review line, set up in render, convert to or?
 const API_URL = import.meta.env.VITE_API_URL; 
 
 const login = async (userInfo: UserLogin) => {
@@ -15,7 +17,7 @@ const login = async (userInfo: UserLogin) => {
     throw new Error(data.message || "Login failed");
   }
 
-  // Needed to store JWT token in localStorage
+  // Must store JWT token in localStorage
   localStorage.setItem("token", data.token);
   
   return data;

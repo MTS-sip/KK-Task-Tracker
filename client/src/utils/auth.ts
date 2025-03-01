@@ -3,7 +3,12 @@ import { JwtPayload, jwtDecode } from 'jwt-decode';
 class AuthService {
   getProfile() {
     const token = this.getToken();
-    return token ? jwtDecode<JwtPayload>(token) : null;
+    try {
+      return token ? jwtDecode<JwtPayload>(token) : null;
+    } catch (error) {
+      console.error("Invalid token:", error);
+      return null;
+    }
   }
 
   loggedIn() {
@@ -40,3 +45,7 @@ class AuthService {
 }
 
 export default new AuthService();
+
+
+
+
