@@ -20,9 +20,12 @@ const EditTicket = () => {
   }
 
   useEffect(() => {
-    fetchTicket(state);
-  }, []);
+    if (state) {
+        fetchTicket(state);
+    }
+}, [state]);
 
+  
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     if (ticket && ticket.id !== null){
