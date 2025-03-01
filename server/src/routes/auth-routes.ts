@@ -25,7 +25,7 @@ const login = async (req: Request, res: Response) => {
     }
 
     const token = jwt.sign(
-      { id: user.id }, // Only include necessary user details
+      { id: user.id }, // to include all needed user details
       secret,
       { expiresIn: "1h" }
     );

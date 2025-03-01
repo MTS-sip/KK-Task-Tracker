@@ -1,6 +1,6 @@
 import { UserLogin } from "../interfaces/UserLogin";
 
-const API_URL = import.meta.env.VITE_API_URL || "http://localhost:6060";
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:6060"; // fallback on open 
 
 const login = async (userInfo: UserLogin) => {
   const response = await fetch(`${API_URL}/auth/login`, {
@@ -15,7 +15,7 @@ const login = async (userInfo: UserLogin) => {
     throw new Error(data.message || "Login failed");
   }
 
-  // Store JWT token in localStorage
+  // Needed to store JWT token in localStorage
   localStorage.setItem("token", data.token);
   
   return data;

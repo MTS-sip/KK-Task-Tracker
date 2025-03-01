@@ -6,7 +6,7 @@ interface AuthenticatedRequest extends Request {
     user?: any;
 }
 
-// ✅ Ensure authenticateToken is declared first, then exported
+// assures authenticateToken declared first, then exported
 const authenticateToken = (req: AuthenticatedRequest, res: Response, next: NextFunction): void => {
     const token = req.headers.authorization?.split(" ")[1];
 
