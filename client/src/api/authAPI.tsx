@@ -1,8 +1,7 @@
 import { UserLogin } from "../interfaces/UserLogin";
 
-
-// review line, set up in render, convert to or?
-const API_URL = import.meta.env.VITE_API_URL; 
+// review line
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:3000";
 
 const login = async (userInfo: UserLogin) => {
   const response = await fetch(`${API_URL}/auth/login`, {
