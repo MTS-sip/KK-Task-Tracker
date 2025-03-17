@@ -1,4 +1,4 @@
-# Task Tracker
+# Krazy Kanban Task Tracker
 
 Links 🔴 [Deployed Render Link](https://fourteen-march-one.onrender.com/), and [GitHub Repository](https://github.com/MTS-sip/KK-Task-Tracker/tree/main)🔴
 
@@ -22,9 +22,10 @@ Usage & Testing
 -- Can be tested [@ Render](https://fourteen-march-one.onrender.com/)
 
 For login in: Seeded Users
-{ username: 'JollyGuru', password: 'password' }
-{ username: 'SunnyScribe', password: 'password' }
-{ username: 'RadiantComet', password: 'password' }
+
+- Username: 'JollyGuru' | Password: 'password'
+- username: 'SunnyScribe' | Password: 'password'
+- username: 'RadiantComet' | Password: 'password'
 
 ## License
 
